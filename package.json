@@ -1,0 +1,52 @@
+{
+  "name": "dsh-open-deepseek-web",
+  "version": "1.0.0",
+  "description": "Open chat.deepseek.com in a standalone Chrome app window from a DSH sidebar button, focusing the existing window when it is already open.",
+  "type": "module",
+  "license": "MIT",
+  "author": "hezheyihuan",
+  "icon": "./icon.svg",
+  "homepage": "https://github.com/hezheyihuan/dsh-open-deepseek-web#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hezheyihuan/dsh-open-deepseek-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hezheyihuan/dsh-open-deepseek-web/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "deepseek",
+    "chrome",
+    "sidebar"
+  ],
+  "engines": {
+    "dsh": ">=0.2.2-rc.1"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  }
+}
